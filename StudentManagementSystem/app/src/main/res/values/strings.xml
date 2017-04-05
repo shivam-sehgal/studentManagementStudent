@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">StudentManagementSystem</string>
+    <string name="add_student">Add Student</string>
+    <string name="full_name">Name:</string>
+    <string name="email_addrs">Email:</string>
+    <string name="gender_txt">Gender:</string>
+    <string name="roll_no">Roll No:</string>
+    <string name="full_name_txt">Student Name</string>
+    <string name="select_gender">Select your Gender</string>
+    <string name="select_rollNo">Enter your RollNo</string>
+    <string name="submit">Submit</string>
+    <string name="school_name_text">School Name</string>
+    <string name="dialog_txt">What do you want to do?</string>
+    <string name="toogle_btn">Toogle</string>
+    <string-array name="sorting_creterias">
+        <item>Select sorting creteria</item>
+        <item>Name base</item>
+        <item>RollNo base</item>
+    </string-array>
+</resources>

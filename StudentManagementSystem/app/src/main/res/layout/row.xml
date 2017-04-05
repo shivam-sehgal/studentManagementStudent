@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="2dp"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+<TextView
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:text="@string/full_name"
+    android:theme="@style/app_font"
+
+    android:id="@+id/name_txt"
+    />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:theme="@style/app_font"
+        android:layout_gravity="left"
+
+        android:id="@+id/first_name"
+
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:theme="@style/app_font"
+        android:layout_weight="0.5"
+
+        android:id="@+id/last_name"
+
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/email_addrs"
+        android:layout_gravity="left"
+        android:theme="@style/app_font"
+
+        android:id="@+id/email_txt"
+
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:theme="@style/app_font"
+        android:layout_gravity="left"
+        android:id="@+id/email"
+
+        />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_txt"
+        android:theme="@style/app_font"
+        android:layout_gravity="left"
+
+        android:id="@+id/gender_txt"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:theme="@style/app_font"
+
+
+        android:id="@+id/gender"
+        android:layout_gravity="left"
+
+        />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/school_name_text"
+            android:theme="@style/app_font"
+            android:layout_gravity="left"
+
+            android:id="@+id/school_name_txt"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:theme="@style/app_font"
+
+
+            android:id="@+id/school_name_value"
+            android:layout_gravity="left"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/roll_no"
+        android:theme="@style/app_font"
+
+        android:layout_gravity="left"
+        android:id="@+id/roll_no_txt"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:theme="@style/app_font"
+        android:layout_gravity="left"
+
+        android:id="@+id/roll_no"
+
+        />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
+</LinearLayout>
