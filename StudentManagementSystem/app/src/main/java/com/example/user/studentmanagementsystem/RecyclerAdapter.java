@@ -20,6 +20,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     private ArrayList<StudentData> dataList;
     private Activity ctx;
+    private RecyclerAdapter recyclerAdapter;
 
     /**
      * @param ctx abz
@@ -27,6 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public RecyclerAdapter(final Activity ctx) {
         this.dataList = new ArrayList<StudentData>();
         this.ctx = ctx;
+        recyclerAdapter = this;
     }
 
     /**
@@ -34,6 +36,29 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
      */
     public void addElementInList(final StudentData studentData) {
         dataList.add(studentData);
+    }
+
+    /**
+     * @param pos position
+     * @return get object of studentdata
+     */
+    public StudentData getElementInList(final int pos) {
+        return dataList.get(pos);
+    }
+
+    /**
+     * @param pos position
+     */
+    public void deleteElementAtPosition(final int pos) {
+        dataList.remove(pos);
+    }
+
+    /**
+     * @param sdata studentdata
+     * @param pos   position
+     */
+    public void updateElementInList(final StudentData sdata, final int pos) {
+        dataList.set(pos, sdata);
     }
 
     @Override
@@ -180,7 +205,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         @Override
         public void onClick(final View v) {
-            CustomDialogClass dialog = new CustomDialogClass(ctx);
+            int positionAdapter = getAdapterPosition();
+            CustomDialogClass dialog = new CustomDialogClass(ctx, positionAdapter, recyclerAdapter);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.show();
 

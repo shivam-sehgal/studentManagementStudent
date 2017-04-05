@@ -4,6 +4,7 @@ apply plugin: 'checkstyle'
 preBuild.dependsOn('checkstyle')
 assemble.dependsOn('lint')
 check.dependsOn('checkstyle')
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"

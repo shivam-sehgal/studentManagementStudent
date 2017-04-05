@@ -12,6 +12,7 @@
     <string name="school_name_text">School Name</string>
     <string name="dialog_txt">What do you want to do?</string>
     <string name="toogle_btn">Toogle</string>
+    <string name="back_btn">Back</string>
     <string-array name="sorting_creterias">
         <item>Select sorting creteria</item>
         <item>Name base</item>

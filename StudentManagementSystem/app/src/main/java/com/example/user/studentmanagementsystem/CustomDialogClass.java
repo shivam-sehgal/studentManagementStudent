@@ -11,18 +11,25 @@ import android.widget.Button;
  */
 
 public class CustomDialogClass extends Dialog implements android.view.View.OnClickListener {
-
+    private static final int REQ_CODE = 1;
     private Activity activity;
     private Button btnView;
     private Button btnEdit;
     private Button btnDelete;
+    private int adapterPosition;
+    private StudentData studentData;
+    private RecyclerAdapter recyclerAdapter;
 
     /**
-     * @param activity abc
+     * @param activity ac
+     * @param adapterPosition pos
+     * @param recyclerAdapter ad
      */
-    public CustomDialogClass(final Activity activity) {
+    public CustomDialogClass(final Activity activity, final int adapterPosition, final RecyclerAdapter recyclerAdapter) {
         super(activity);
         this.activity = activity;
+        this.adapterPosition = adapterPosition;
+        this.recyclerAdapter = recyclerAdapter;
     }
 
     /**
@@ -63,12 +70,21 @@ public class CustomDialogClass extends Dialog implements android.view.View.OnCli
 
         switch (v.getId()) {
             case R.id.view_btn:
+                studentData = recyclerAdapter.getElementInList(adapterPosition);
+                ((AddStudentActivity) activity).startViewingListElement(studentData);
+
                 dismiss();
                 break;
             case R.id.edit_btn:
+
+                studentData = recyclerAdapter.getElementInList(adapterPosition);
+                ((AddStudentActivity) activity).startEditActivity(studentData, adapterPosition);
+
                 dismiss();
                 break;
             case R.id.delete_btn:
+                recyclerAdapter.deleteElementAtPosition(adapterPosition);
+                recyclerAdapter.notifyDataSetChanged();
                 dismiss();
                 break;
             default:

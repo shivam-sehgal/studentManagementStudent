@@ -1,8 +1,8 @@
 package com.example.user.studentmanagementsystem;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * this is splash screen
@@ -17,6 +17,7 @@ public class SplashActivity extends AppCompatActivity {
      */
 
     public static final int DELAY = 1000;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

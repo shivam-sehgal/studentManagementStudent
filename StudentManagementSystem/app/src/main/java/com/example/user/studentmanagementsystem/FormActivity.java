@@ -2,9 +2,9 @@ package com.example.user.studentmanagementsystem;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,6 +53,23 @@ public class FormActivity extends AppCompatActivity {
         etRollNo = (EditText) findViewById(R.id.roll_no_form);
         femaleRadioButton = (RadioButton) findViewById(R.id.radio_female);
         submit = (Button) findViewById(R.id.submit_btn);
+
+        if (getIntent().getIntExtra("checkStatus", 9) == 0) {
+            StudentData stData = getIntent().getExtras().getParcelable("objEdit");
+            etFirstName.setText(stData.getFirstName());
+            etLastName.setText(stData.getLastName());
+            etEmail.setText(stData.getEmail());
+            etSchoolName.setText(stData.getSchoolName());
+            etRollNo.setText("" + stData.getRollNumber());
+            submit.setText("Update");
+            String sex = stData.getGender();
+            if ("Male".equals(sex)) {
+                maleRadioButton.setChecked(true);
+            } else if ("Female".equals(sex)) {
+                femaleRadioButton.setChecked(true);
+            }
+        }
+
 
     }
 
